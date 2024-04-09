@@ -1,42 +1,25 @@
 :root{
-    /* colors: white; black, red */
-    --white: #fff;
+    --primary: #e5e5e5;
+    --secondary: #1a1a1a;
+    --tertiary: #ff0000;
     --black: #000;
-    --red: #ff0000;
-    /* colors as rgba */
-    --black-rgba: rgba(0, 0, 0, 0.8);
-    --white-rgba: rgba(255, 255, 255, 0.8);
-    --red-rgba: rgba(255, 0, 0, 0.8);
-    /* CMYK on top of these colors */
-    --black-cmyk: #1a1a1a;
-    --white-cmyk: #e5e5e5;
-    --red-cmyk: #00ff00;
     /* fonts */
-    --font-family: 'Roboto', sans-serif;
-    --font-size: 1rem;
-    /* spacing */
-    --spacing: 0.25rem;
-    /* shadows */
-    --shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    /* border radius */
-    --radius: 0.25rem;
-    /* transition */
-    --transition: all 0.3s linear;
+    --font: 'system-ui';
 }
 
 body{
-    background-color: var(--black-cmyk);
-    color: var(--white);
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-family: var(--font);
 }
 
 h1{
-    color: var(--red);
+    color: var(--tertiary);
 }
 
 .viewport{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100vh;
 }
@@ -44,8 +27,16 @@ h1{
 .logo img, .logo svg{
     width: 14rem;
     height: 14rem;
-    fill: var(--red);
+    fill: var(--tertiary);
     margin: 0 auto;
+}
+
+.footer{
+    margin-top: 1.4rem;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    background-color: var(--black);
 }
 
 /* For Chrome, Safari, and Opera */
@@ -59,7 +50,7 @@ h1{
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #000; /* Thumb color */
+    background: var(--black); /* Thumb color */
     border: 2px solid #555; /* Gives the thumb a metallic edge */
     border-radius: 4px; /* Optional: Rounds the corners of the thumb */
 }
@@ -67,7 +58,22 @@ h1{
 /* For Firefox */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #000 #333; /* Thumb and track color */
+    scrollbar-color: var(--black) #333; /* Thumb and track color */
+}
+
+/* Buttons */
+button {
+    padding: 0.42rem;
+    color: var(--primary);
+    background-color: var(--tertiary);
+    text-transform: uppercase;
+    border: 0px solid var(--tertiary);
+}
+
+button:hover {
+    background-color: var(--black);
+    border: 0px solid var(--tertiary);
+    cursor: pointer;
 }
 
 
