@@ -16,6 +16,23 @@ h1{
     color: var(--tertiary);
 }
 
+a{
+    color: var(--tertiary);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+a:visited{
+    color: var(--tertiary);
+}
+
+a:focus{
+    outline: none;
+}
+
 .viewport{
     display: flex;
     flex-direction: column;
@@ -31,11 +48,15 @@ h1{
 }
 
 .footer{
-    margin-top: 1.4rem;
+    margin-top: -1.4rem;
     width: 100%;
     text-align: center;
     padding: 0.5rem;
     background-color: var(--secondary);
+}
+
+.smaller{
+    font-size: 0.63rem;
 }
 
 /* For Chrome, Safari, and Opera */
